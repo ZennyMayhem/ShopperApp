@@ -108,7 +108,7 @@ namespace ShopperApp
             Console.WriteLine("\tPress [2] to purchase 1 Blue Hat    -    ($10)\n");
             Console.WriteLine("\tPress [3] to purchase 1 Black Hat   -    ($10)\n");
             Console.WriteLine("\tPress [4] to purchase 1 White Hat   -    ($10)\n");
-            Console.WriteLine("\t\n");
+            Console.WriteLine("\tPress [5] to purchase 1 Pink Hat    -    ($10)\n");
             Console.WriteLine("\tPress [r] to return to Shop Counter\n");
             Console.WriteLine("******************************************************");
             Console.Write("\tPlease select from the options menu: ");
