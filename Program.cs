@@ -9,8 +9,35 @@ namespace ShopperApp
 {
     internal class Program
     {
-        // global class variable
-        public static int money = 100;
+        public static void Login()
+        {
+
+            // ask user to enter username
+            Console.Write("\n\t Please enter a username:");
+            Console.ReadLine();
+            Console.Clear();
+
+            // ask user to enter username
+            Console.Write("\n\t Please enter a password:");
+            Console.ReadLine();
+            Console.Clear();
+
+            Console.Write("\n\tWelcome back!!");
+            Console.ReadKey();
+            Console.Clear();
+
+            Console.WriteLine("\n\tCongratulations!!! You are our lucky 1,000th shopper today. ");
+            Console.Write("\n\tHere's $100 free store credit");
+            Console.ReadKey();
+            Console.Clear();
+           
+            ShopCounter1();
+        }
+
+
+
+// global class variable
+public static int money = 100;
         
         // *when adding log in section make user a lucky shopper winner who gets $100 voucher
         public static void ShopCounter1()
@@ -355,7 +382,7 @@ namespace ShopperApp
         }
         static void Main(string[] args)
         {
-            ShopCounter1();
+            Login();
         }
     }
 }
