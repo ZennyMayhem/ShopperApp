@@ -4,30 +4,30 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-        // comments with * are callobater notes, that will be deleted eventually.
+
 namespace ShopperApp
 {
     internal class Program
     {
+            // login function
         public static void Login()
         {
-
             // ask user to enter username
             Console.Write("\n\t Please enter a username:");
             Console.ReadLine();
             Console.Clear();
 
-            // ask user to enter username
+            // ask user to enter password
             Console.Write("\n\t Please enter a password:");
             Console.ReadLine();
             Console.Clear();
 
-            Console.Write("\n\tWelcome back!!");
+            Console.Write("\n\tYou have sucessfully signed up with Hatrick.");
             Console.ReadKey();
             Console.Clear();
-
-            Console.WriteLine("\n\tCongratulations!!! You are our lucky 1,000th shopper today. ");
-            Console.Write("\n\tHere's $100 free store credit");
+            // give user store credit
+            Console.WriteLine("\n\tCongratulations!!! You are our lucky 1,000th member. ");
+            Console.Write("\n\tHere's $100 free store credit.");
             Console.ReadKey();
             Console.Clear();
            
@@ -39,10 +39,10 @@ namespace ShopperApp
 // global class variable
 public static int money = 100;
         
-        // *when adding log in section make user a lucky shopper winner who gets $100 voucher
+            // initial Menu function
         public static void ShopCounter1()
         {
-            // initial Menu*shopCounter1 has no checkout or addfunds option.
+            // options menu display
             Console.WriteLine("\n******************************************************\t\t\t\t\t       ***************");
             Console.WriteLine("\t\t WELCOME TO HATRICK\t\t\t\t\t\t\t\tOnline Shopper");
             Console.WriteLine($"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBalance : ${money}");
@@ -69,6 +69,7 @@ public static int money = 100;
                 case "x":
                     Exit();
                     break;
+            // default prevents incorrect user input
                 default:
                     Console.Clear();
                     ShopCounter1();
@@ -77,10 +78,10 @@ public static int money = 100;
             }
 
         }
-
+            // main Menu function
         public static void ShopCounter()
         {
-            // main Menu
+            // options menu display
             Console.WriteLine("\n******************************************************\t\t\t\t\t       ***************");
             Console.WriteLine("\t\t  WELCOME TO HATRICK\t\t\t\t\t\t\t\tOnline Shopper");
             Console.WriteLine($"\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tBalance : ${money}");
@@ -123,13 +124,13 @@ public static int money = 100;
             }
 
         }
-
+            // product menu 1 funtion
         public static void CategoryOne()
         {
-            // product menu 1
+            // options menu
             Console.Clear();
             Console.WriteLine("\n******************************************************");
-            Console.WriteLine("\t\t    Mens Hats");// *the only line that changes per catergory
+            Console.WriteLine("\t\t    Mens Hats");
             Console.WriteLine("******************************************************\n");
             Console.WriteLine("\tPress [1] to purchase 1 Red Hat     -    ($10)\n");
             Console.WriteLine("\tPress [2] to purchase 1 Blue Hat    -    ($10)\n");
@@ -199,7 +200,7 @@ public static int money = 100;
                 // product menu 2
                 Console.Clear();
                 Console.WriteLine("\n******************************************************");
-                Console.WriteLine("\t\t    Womens Hats");// *the only line that changes per catergory
+                Console.WriteLine("\t\t    Womens Hats");
                 Console.WriteLine("******************************************************\n");
                 Console.WriteLine("\tPress [1] to purchase 1 Red Hat     -    ($10)\n");
                 Console.WriteLine("\tPress [2] to purchase 1 Blue Hat    -    ($10)\n");
@@ -210,7 +211,7 @@ public static int money = 100;
                 Console.WriteLine("******************************************************");
                 Console.Write("\tPlease select from the options menu: ");
 
-                // zero balance default
+                
                 if (money <= 0)
                 {
                     Console.WriteLine("\n******************************************************");
@@ -263,15 +264,15 @@ public static int money = 100;
 
             }
         }
-
+                // product menu 3
         public static void CategoryThree()
         {
             Console.Clear();
             {
-                // product menu 3
+                
                 Console.Clear();
                 Console.WriteLine("\n******************************************************");
-                Console.WriteLine("\t\t    Kids Hats");// *the only line that changes per catergory
+                Console.WriteLine("\t\t    Kids Hats");
                 Console.WriteLine("******************************************************\n");
                 Console.WriteLine("\tPress [1] to purchase 1 Red Hat     -    ($10)\n");
                 Console.WriteLine("\tPress [2] to purchase 1 Blue Hat    -    ($10)\n");
@@ -283,7 +284,7 @@ public static int money = 100;
                 Console.Write("\tPlease select from the options menu: ");
 
 
-                // zero balance default
+                
                 if (money <= 0)
                 {
                     Console.WriteLine("\n******************************************************");
@@ -348,10 +349,10 @@ public static int money = 100;
             ShopCounter();
         }
 
-
+            // checkout function
         public static void CheckOut()
         {
-
+            
             Console.WriteLine("\n You have successfully checked out..");
             Console.WriteLine("\n We hope you enjoy your new hats.");
             Console.WriteLine("\n******************************************************");
@@ -372,9 +373,10 @@ public static int money = 100;
 
         }
 
-
+            // logout function
         public static void Exit()
         {
+            
             Console.Clear();
             Console.WriteLine("\n You have successfully logged out.");
             Console.WriteLine("\n Thanks for shopping at HATRICK. We hope to see you again soon.\n");
